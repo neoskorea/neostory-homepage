@@ -61,34 +61,22 @@ export default function HistorySection() {
 
           <div className="space-y-16 lg:space-y-24">
             {historyData.map((item, index) => (
-              <div key={index} className={`flex flex-col lg:flex-row items-center ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
-                }`}>
-                {/* 연도 */}
+              <div key={index} className="flex flex-col lg:flex-row items-center">
+                {/* 연도 (항상 왼쪽) */}
                 <div className="flex-1 text-center lg:text-right lg:pr-16 mb-8 lg:mb-0">
-                  {index % 2 === 0 ? (
-                    <div className="text-6xl md:text-7xl font-light text-[#93d1d3]">
-                      {item.year}
-                    </div>
-                  ) : (
-                    <div className="lg:hidden text-6xl md:text-7xl font-light text-[#93d1d3]">
-                      {item.year}
-                    </div>
-                  )}
+                  <div className="text-6xl md:text-7xl font-light text-[#93d1d3]">
+                    {item.year}
+                  </div>
                 </div>
 
                 {/* 중앙 점 */}
                 <div className="relative z-10 w-4 h-4 bg-[#93d1d3] rounded-full border-4 border-white shadow-lg hidden lg:block"></div>
 
-                {/* 이벤트 */}
+                {/* 이벤트 (항상 오른쪽) */}
                 <div className="flex-1 text-center lg:text-left lg:pl-16">
-                  {index % 2 === 1 && (
-                    <div className="hidden lg:block text-6xl md:text-7xl font-light text-[#93d1d3] mb-6">
-                      {item.year}
-                    </div>
-                  )}
                   <div className="space-y-3">
                     {item.events.map((event, eventIndex) => (
-                      <div key={eventIndex} className="text-gray-700 leading-relaxed">
+                      <div key={eventIndex} className="text-gray-600 leading-relaxed">
                         {event}
                       </div>
                     ))}

@@ -77,69 +77,52 @@ export default function IPShowcaseSection() {
           </p>
         </div>
 
-        {/* IP 그리드 */}
-        <div className="space-y-24">
-          {ipData.map((ip, index) => (
+        {/* 상위 3개 IP - 좁은 너비로 글+이미지 조합 */}
+        <div className="max-w-4xl mx-auto space-y-16 mb-32">
+          {ipData.slice(0, 3).map((ip, index) => (
             <div
               key={index}
-              className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
+              className={`flex flex-col lg:flex-row items-center gap-8 ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''
                 }`}
             >
-              {/* 이미지 */}
-              <div className={`${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
-                <div className="aspect-[3/4] overflow-hidden rounded bg-gray-50">
+              {/* 이미지 - 배경 제거 */}
+              <div className="flex-shrink-0">
+                <div className="max-w-[200px] mx-auto">
                   <Image
                     src={ip.image}
                     alt={ip.title}
-                    width={400}
-                    height={533}
-                    className="w-full h-full object-cover"
+                    width={200}
+                    height={355}
+                    className="w-full h-auto object-contain"
                   />
                 </div>
               </div>
 
-              {/* 콘텐츠 */}
-              <div className={`${index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
+              {/* 콘텐츠 - 텍스트 크기 증가 */}
+              <div className="flex-1">
                 <div className="flex items-center gap-3 mb-4">
-                  <h3 className="text-3xl font-light text-gray-900">{ip.title}</h3>
-                  <span className={`px-3 py-1 rounded text-xs font-light tracking-wider ${ip.status === 'ongoing' ? 'bg-green-100 text-green-700' :
-                      ip.status === 'completed' ? 'bg-blue-100 text-blue-700' :
-                        'bg-orange-100 text-orange-700'
+                  <h3 className="text-4xl font-light text-gray-900">{ip.title}</h3>
+                  <span className={`px-3 py-1 rounded text-sm font-light tracking-wider ${ip.status === 'ongoing' ? 'bg-green-100 text-green-700' :
+                    ip.status === 'completed' ? 'bg-blue-100 text-blue-700' :
+                      'bg-orange-100 text-orange-700'
                     }`}>
                     {ip.category}
                   </span>
                 </div>
 
-                <p className="text-sm font-light text-gray-500 mb-6">{ip.author}</p>
+                <div className="text-base font-light text-gray-500 mb-6">
+                  {ip.author}
+                </div>
 
-                <p className="text-gray-700 leading-relaxed mb-6 whitespace-pre-line font-light">
+                <p className="text-gray-600 font-light leading-relaxed mb-8 text-lg whitespace-pre-line">
                   {ip.description}
                 </p>
 
-                {/* 워크플로우 (엘피스용) */}
-                {ip.workflow && (
-                  <div className="mb-6">
-                    <div className="flex flex-wrap items-center gap-2 text-xs">
-                      {ip.workflow.map((step, stepIndex) => (
-                        <React.Fragment key={stepIndex}>
-                          <span className="bg-gray-100 text-gray-600 px-3 py-1 rounded font-light">
-                            {step}
-                          </span>
-                          {stepIndex < ip.workflow!.length - 1 && (
-                            <span className="text-gray-400">→</span>
-                          )}
-                        </React.Fragment>
-                      ))}
-                    </div>
-                  </div>
-                )}
-
-                {/* 태그들 */}
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-3">
                   {ip.tags.map((tag, tagIndex) => (
                     <span
                       key={tagIndex}
-                      className="text-xs font-light text-gray-600 border border-gray-200 px-3 py-1 rounded"
+                      className="px-4 py-2 bg-[#93d1d3]/10 text-[#93d1d3] text-sm font-light rounded border border-[#93d1d3]/20"
                     >
                       {tag}
                     </span>
@@ -149,6 +132,77 @@ export default function IPShowcaseSection() {
             </div>
           ))}
         </div>
+
+        {/* 엘피스 - 별도 레이아웃 */}
+        {ipData.slice(3).map((ip, index) => (
+          <div key={index} className="max-w-6xl mx-auto">
+            {/* 제목과 상태 */}
+            <div className="text-center mb-8">
+              <div className="flex items-center justify-center gap-4 mb-4">
+                <h3 className="text-4xl font-light text-gray-900">{ip.title}</h3>
+                <span className="px-4 py-2 bg-orange-100 text-orange-700 text-sm font-light tracking-wider rounded">
+                  예정작
+                </span>
+              </div>
+              <p className="text-xl font-light text-gray-600">일본 드라마 웹툰 제작</p>
+            </div>
+
+            {/* 메인 이미지 - 좌우 꽉 채움 */}
+            <div className="mb-12">
+              <div className="aspect-[16/9] overflow-hidden rounded">
+                <Image
+                  src={ip.image}
+                  alt={ip.title}
+                  width={1200}
+                  height={675}
+                  className="w-full h-full object-contain"
+                />
+              </div>
+            </div>
+
+            {/* 작가 강조 */}
+            <div className="text-center mb-8">
+              <p className="text-xl font-medium text-gray-900 leading-relaxed">
+                국내에도 많이 알려진 &lt;조제, 호랑이, 그리고 물고기들&gt;, &lt;메종 드 히미코&gt;의<br />
+                <span className="text-[#93d1d3] font-semibold">와타나베 아야 작가 원작 집필</span>
+              </p>
+            </div>
+
+            {/* 설명 */}
+            <div className="text-center mb-12 max-w-4xl mx-auto">
+              <p className="text-lg font-light text-gray-600 leading-relaxed">
+                사회고발 미스터리 추적극으로, 좌천된 앵커와 예능국 PD가<br />
+                무고죄로 복역 중인 사내의 사건을 추적하며 벌어지는 이야기를<br />
+                한국 실정에 맞게 각색하여 리메이크 제작 예정
+              </p>
+            </div>
+
+            {/* 태그들 */}
+            <div className="flex justify-center gap-4 mb-16">
+              <span className="px-6 py-3 bg-[#93d1d3] text-white text-sm font-medium rounded">
+                2025년 하반기 네이버/라인망가 한·일 동시 연재
+              </span>
+              <span className="px-6 py-3 bg-[#93d1d3] text-white text-sm font-medium rounded">
+                일본 간사이 TV 웹툰 제작 투자
+              </span>
+            </div>
+
+            {/* 도식화 */}
+            <div className="flex justify-center items-center gap-8 text-center">
+              <div className="bg-white border-2 border-[#93d1d3] rounded-2xl px-8 py-6 min-w-[180px]">
+                <p className="text-lg font-medium text-[#93d1d3]">일본 히트 드라마</p>
+              </div>
+              <div className="text-[#93d1d3] text-3xl">→</div>
+              <div className="bg-white border-2 border-[#93d1d3] rounded-2xl px-8 py-6 min-w-[180px]">
+                <p className="text-lg font-medium text-[#93d1d3]">웹툰 제작<br />(각색)</p>
+              </div>
+              <div className="text-[#93d1d3] text-3xl">→</div>
+              <div className="bg-white border-2 border-[#93d1d3] rounded-2xl px-8 py-6 min-w-[180px]">
+                <p className="text-lg font-medium text-[#93d1d3]">한국 드라마<br />리메이크</p>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );

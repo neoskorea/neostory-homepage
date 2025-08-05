@@ -53,6 +53,23 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.1em;
 }
 
+/* Improved text colors for better readability */
+.text-gray-400 {
+  color: #6b7280 !important;
+}
+
+.text-gray-500 {
+  color: #4b5563 !important;
+}
+
+.text-gray-600 {
+  color: #374151 !important;
+}
+
+.text-gray-700 {
+  color: #1f2937 !important;
+}
+
 /* Consistent spacing */
 .section-spacing {
   padding-top: 4rem;

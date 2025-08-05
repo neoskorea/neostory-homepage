@@ -52,79 +52,37 @@ export default function BookPublishingSection() {
           ))}
         </div>
 
-        {/* 출간물 이미지 */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          {/* 이미지 그리드 */}
-          <div className="order-2 lg:order-1">
-            <div className="grid grid-cols-2 gap-6">
-              <div>
-                <div className="text-xs font-light text-gray-400 mb-3 tracking-wider">
-                  COVER DESIGN
-                </div>
-                <div className="aspect-[3/4] bg-gray-50 rounded overflow-hidden">
-                  <Image
-                    src="/images/works/img11_neostory_book.png"
-                    alt="단행본 표지"
-                    width={200}
-                    height={267}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <div className="text-xs font-light text-gray-400 mb-3 tracking-wider">
-                  INTERIOR
-                </div>
-                <div className="aspect-[3/4] bg-gray-50 rounded overflow-hidden">
-                  <Image
-                    src="/images/works/img12_neostory_book2.png"
-                    alt="단행본 내지"
-                    width={200}
-                    height={267}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
+        {/* 출간물 이미지 - 좌우 꽉 채움 */}
+        <div className="max-w-6xl mx-auto">
+          {/* 표지 */}
+          <div className="mb-16">
+            <div className="text-sm font-light text-gray-400 mb-6 tracking-wider text-center">
+              COVER DESIGN
+            </div>
+            <div className="w-full">
+              <Image
+                src="/images/works/img11_neostory_book.png"
+                alt="단행본 표지"
+                width={800}
+                height={600}
+                className="w-full h-auto object-contain rounded"
+              />
             </div>
           </div>
 
-          {/* 텍스트 콘텐츠 */}
-          <div className="order-1 lg:order-2">
-            <h3 className="text-3xl font-light text-gray-900 mb-8">
-              글로벌 출간 전략
-            </h3>
-
-            <div className="space-y-6">
-              <div className="border-l border-gray-200 pl-6">
-                <h4 className="font-medium text-gray-900 mb-2">
-                  현지화 전문성
-                </h4>
-                <p className="text-gray-600 font-light leading-relaxed">
-                  단순한 번역을 넘어서 각 국가의 문화와 독자 취향에 맞는
-                  로컬라이징을 통해 진정한 글로벌 콘텐츠를 만들어갑니다.
-                </p>
-              </div>
-
-              <div className="border-l border-gray-200 pl-6">
-                <h4 className="font-medium text-gray-900 mb-2">
-                  프리미엄 품질
-                </h4>
-                <p className="text-gray-600 font-light leading-relaxed">
-                  표지부터 내지까지 모든 요소에서 완벽한 퀄리티를 추구하며,
-                  독자들에게 최상의 독서 경험을 제공합니다.
-                </p>
-              </div>
-
-              <div className="border-l border-gray-200 pl-6">
-                <h4 className="font-medium text-gray-900 mb-2">
-                  확장 가능성
-                </h4>
-                <p className="text-gray-600 font-light leading-relaxed">
-                  일본과 프랑스에서의 성공적인 출간을 바탕으로
-                  미국, 독일 등 더 많은 국가로 확장해 나가고 있습니다.
-                </p>
-              </div>
+          {/* 내지 */}
+          <div>
+            <div className="text-sm font-light text-gray-400 mb-6 tracking-wider text-center">
+              INTERIOR
+            </div>
+            <div className="w-full">
+              <Image
+                src="/images/works/img12_neostory_book2.png"
+                alt="단행본 내지"
+                width={800}
+                height={600}
+                className="w-full h-auto object-contain rounded"
+              />
             </div>
           </div>
         </div>

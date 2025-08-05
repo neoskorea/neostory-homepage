@@ -119,21 +119,7 @@ export default function PageConversionSection() {
           ))}
         </div>
 
-        {/* CTA */}
-        <div className="text-center">
-          <div className="max-w-4xl mx-auto border border-gray-200 rounded p-12">
-            <h3 className="text-3xl font-light text-gray-900 mb-6">
-              전문적인 판형화 서비스
-            </h3>
-            <p className="text-gray-600 font-light leading-relaxed mb-8 max-w-2xl mx-auto">
-              네오스토리의 판형화 서비스는 단순한 형식 변환을 넘어서
-              각 스토리의 특성을 살린 전문적인 편집 서비스를 제공합니다.
-            </p>
-            <button className="bg-[#93d1d3] hover:bg-[#6bbfc2] text-white font-light px-8 py-3 rounded transition-colors duration-300">
-              서비스 문의하기
-            </button>
-          </div>
-        </div>
+
       </div>
     </section>
   );

@@ -38,15 +38,15 @@ export default function EpubServiceSection() {
           </p>
         </div>
 
-        {/* EPUB 서비스 그리드 */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        {/* EPUB 서비스 - 세로 배치로 변경 */}
+        <div className="space-y-16">
           {epubServices.map((service, index) => (
-            <div key={index} className="bg-white rounded border border-gray-100">
+            <div key={index} className="bg-white rounded border border-gray-100 max-w-6xl mx-auto">
               {/* 헤더 */}
               <div className="border-b border-gray-100 p-6">
                 <div className="flex items-center justify-between">
                   <div>
-                    <h3 className="text-xl font-light text-gray-900 mb-1">
+                    <h3 className="text-2xl font-light text-gray-900 mb-1">
                       {service.title}
                     </h3>
                     <p className="text-sm font-light text-gray-500">
@@ -58,37 +58,37 @@ export default function EpubServiceSection() {
               </div>
 
               {/* 콘텐츠 */}
-              <div className="p-6">
-                <div className="grid grid-cols-3 gap-4">
+              <div className="p-8">
+                <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
                   {/* 표지 */}
-                  <div className="col-span-1">
-                    <div className="text-xs font-light text-gray-400 mb-3 tracking-wider">
+                  <div className="md:col-span-1">
+                    <div className="text-xs font-light text-gray-400 mb-4 tracking-wider">
                       COVER
                     </div>
-                    <div className="aspect-[3/4] bg-gray-50 rounded overflow-hidden">
+                    <div className="aspect-[3/4] bg-gray-50 rounded overflow-hidden max-w-sm mx-auto md:mx-0">
                       <Image
                         src={service.coverImage}
                         alt={`${service.title} 표지`}
-                        width={120}
-                        height={160}
+                        width={300}
+                        height={400}
                         className="w-full h-full object-cover"
                       />
                     </div>
                   </div>
 
                   {/* 내용 */}
-                  <div className="col-span-2">
-                    <div className="text-xs font-light text-gray-400 mb-3 tracking-wider">
+                  <div className="md:col-span-4">
+                    <div className="text-xs font-light text-gray-400 mb-4 tracking-wider">
                       CONTENT
                     </div>
-                    <div className="grid grid-cols-2 gap-3">
+                    <div className="grid grid-cols-2 gap-6">
                       {service.contentImages.map((image, imageIndex) => (
                         <div key={imageIndex} className="aspect-[3/4] bg-gray-50 rounded overflow-hidden">
                           <Image
                             src={image}
                             alt={`${service.title} 내용 ${imageIndex + 1}`}
-                            width={100}
-                            height={133}
+                            width={300}
+                            height={400}
                             className="w-full h-full object-cover"
                           />
                         </div>

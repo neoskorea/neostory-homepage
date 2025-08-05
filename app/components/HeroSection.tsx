@@ -21,22 +21,22 @@ export default function HeroSection() {
 
         {/* 메인 타이틀 */}
         <h1 className="text-gray-900 mb-8">
-          <div className="text-lg md:text-xl font-light tracking-wider text-gray-600 mb-4">
+          <div className="text-sm md:text-base font-light tracking-wider text-gray-500 mb-6">
             CREATIVE CONTENT BRIDGE
           </div>
-          <div className="text-4xl md:text-6xl lg:text-7xl font-light leading-tight">
+          <div className="text-3xl md:text-5xl lg:text-6xl font-light leading-tight">
             웹툰에서 영상까지,
           </div>
-          <div className="text-4xl md:text-6xl lg:text-7xl font-light leading-tight text-[#93d1d3] mt-2">
+          <div className="text-3xl md:text-5xl lg:text-6xl font-light leading-tight text-[#93d1d3] mt-2">
             IP의 모든 가능성을
           </div>
-          <div className="text-4xl md:text-6xl lg:text-7xl font-light leading-tight mt-2">
+          <div className="text-3xl md:text-5xl lg:text-6xl font-light leading-tight mt-2">
             연결합니다
           </div>
         </h1>
 
         {/* 서브타이틀 */}
-        <p className="text-lg md:text-xl font-light text-gray-600 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-base md:text-lg font-light text-gray-500 max-w-2xl mx-auto leading-relaxed">
           한국과 일본을 잇는 글로벌 콘텐츠 브릿지
         </p>
       </div>
