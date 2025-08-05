@@ -73,7 +73,7 @@ export default function PageConversionSection() {
                 />
 
                 {/* 왼쪽 원 텍스트 */}
-                <text x="110" y="115" textAnchor="middle" fill="white" fontSize="12" fontWeight="300">
+                <text x="110" y="115" textAnchor="middle" fill="white" fontSize="12" fontWeight="400">
                   <tspan x="110" dy="0">스토리를 고려한</tspan>
                   <tspan x="110" dy="16">컷 구성과</tspan>
                   <tspan x="110" dy="16">스크롤 연출을</tspan>
@@ -82,14 +82,14 @@ export default function PageConversionSection() {
                 </text>
 
                 {/* 오른쪽 원 텍스트 */}
-                <text x="310" y="125" textAnchor="middle" fill="white" fontSize="12" fontWeight="300">
+                <text x="310" y="125" textAnchor="middle" fill="white" fontSize="12" fontWeight="400">
                   <tspan x="310" dy="0">만화 전공</tspan>
                   <tspan x="310" dy="16">작업자의</tspan>
                   <tspan x="310" dy="16">그림 편집 스킬</tspan>
                 </text>
 
                 {/* 겹치는 부분 텍스트 */}
-                <text x="210" y="130" textAnchor="middle" fill="white" fontSize="11" fontWeight="400">
+                <text x="210" y="130" textAnchor="middle" fill="white" fontSize="11" fontWeight="600">
                   <tspan x="210" dy="0">페이지 원고</tspan>
                   <tspan x="210" dy="14">처럼 보이는</tspan>
                   <tspan x="210" dy="14">결과물</tspan>
