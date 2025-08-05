@@ -84,14 +84,6 @@ export default function PageConversionCarousel() {
       {/* 메인 이미지 컨테이너 - 전체 너비로 확장 */}
       <div className="w-full max-w-7xl mx-auto">
         <div className="relative bg-white border border-gray-100 rounded overflow-hidden shadow-sm">
-          {/* 헤더 - 단순화 */}
-          <div className="border-b border-gray-100 p-4">
-            <div className="flex items-center justify-center">
-              <div className="text-2xl font-light text-gray-800">
-                {slides[currentSlide].title}
-              </div>
-            </div>
-          </div>
 
           {/* 이미지 슬라이더 - 좌우 꽉 채움 */}
           <div className="relative overflow-hidden">
@@ -136,31 +128,6 @@ export default function PageConversionCarousel() {
             </button>
           </div>
 
-          {/* 하단 인디케이터 */}
-          <div className="border-t border-gray-100 p-4">
-            <div className="flex justify-center items-center gap-4">
-              {/* 점 인디케이터 */}
-              <div className="flex gap-2">
-                {slides.map((_, index) => (
-                  <button
-                    key={index}
-                    className={`w-3 h-3 rounded-full transition-colors duration-300 ${currentSlide === index ? 'bg-[#93d1d3]' : 'bg-gray-300'
-                      }`}
-                    onClick={() => goToSlide(index)}
-                    aria-label={`Go to slide ${index + 1}`}
-                  />
-                ))}
-              </div>
-
-              {/* 진행 바 */}
-              <div className="flex-1 max-w-xs bg-gray-200 rounded-full h-1 mx-4">
-                <div
-                  className="bg-[#93d1d3] h-1 rounded-full transition-all duration-700 ease-in-out"
-                  style={{ width: `${((currentSlide + 1) / slides.length) * 100}%` }}
-                />
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
