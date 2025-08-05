@@ -22,25 +22,21 @@ export default function CTASection() {
             제작 제안하기
           </button>
 
-          <button className="border-2 border-white hover:bg-white hover:text-[#4a9da1] text-white font-bold py-4 px-8 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105 min-w-[200px]">
+          {/* <button className="border-2 border-white hover:bg-white hover:text-[#4a9da1] text-white font-bold py-4 px-8 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105 min-w-[200px]">
             회사 소개서 다운로드
-          </button>
+          </button> */}
         </div>
 
         {/* 연락처 정보 */}
         <div className="mt-16 pt-8 border-t border-white/20">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-white/80">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-white/80">
             <div>
               <h3 className="font-semibold mb-2">이메일</h3>
-              <p>contact@neostory.co.kr</p>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-2">전화</h3>
-              <p>+82-2-1234-5678</p>
+              <p>contact@neostory.kr</p>
             </div>
             <div>
               <h3 className="font-semibold mb-2">주소</h3>
-              <p>서울특별시 강남구</p>
+              <p>서울특별시 강남구 논현로128길 20, JS빌딩 6층</p>
             </div>
           </div>
         </div>
