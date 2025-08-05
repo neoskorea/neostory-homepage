@@ -122,7 +122,7 @@ export default function IPShowcaseSection() {
                   {ip.tags.map((tag, tagIndex) => (
                     <span
                       key={tagIndex}
-                      className="px-4 py-2 bg-[#93d1d3]/10 text-[#93d1d3] text-sm font-light rounded border border-[#93d1d3]/20"
+                      className="px-4 py-2 bg-[#93d1d3] text-white text-sm font-medium rounded shadow-sm"
                     >
                       {tag}
                     </span>
@@ -178,27 +178,27 @@ export default function IPShowcaseSection() {
             </div>
 
             {/* 태그들 */}
-            <div className="flex justify-center gap-4 mb-16">
-              <span className="px-6 py-3 bg-[#93d1d3] text-white text-sm font-medium rounded">
+            <div className="flex flex-col justify-center items-center gap-4 mb-16">
+              <span className="px-6 py-4 bg-[#93d1d3] text-white text-base font-semibold rounded text-center leading-tight">
                 2025년 하반기 네이버/라인망가 한·일 동시 연재
               </span>
-              <span className="px-6 py-3 bg-[#93d1d3] text-white text-sm font-medium rounded">
+              <span className="px-6 py-4 bg-[#93d1d3] text-white text-base font-semibold rounded text-center leading-tight">
                 일본 간사이 TV 웹툰 제작 투자
               </span>
             </div>
 
             {/* 도식화 */}
-            <div className="flex justify-center items-center gap-8 text-center">
-              <div className="bg-white border-2 border-[#93d1d3] rounded-2xl px-8 py-6 min-w-[180px]">
-                <p className="text-lg font-medium text-[#93d1d3]">일본 히트 드라마</p>
+            <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 text-center">
+              <div className="bg-white border-2 border-[#93d1d3] rounded-2xl px-6 py-8 w-full md:w-48 h-24 flex items-center justify-center">
+                <p className="text-base md:text-lg font-medium text-[#93d1d3] leading-tight">일본 히트 드라마</p>
               </div>
-              <div className="text-[#93d1d3] text-3xl">→</div>
-              <div className="bg-white border-2 border-[#93d1d3] rounded-2xl px-8 py-6 min-w-[180px]">
-                <p className="text-lg font-medium text-[#93d1d3]">웹툰 제작<br />(각색)</p>
+              <div className="text-[#93d1d3] text-2xl md:text-3xl rotate-90 md:rotate-0">→</div>
+              <div className="bg-white border-2 border-[#93d1d3] rounded-2xl px-6 py-8 w-full md:w-48 h-24 flex items-center justify-center">
+                <p className="text-base md:text-lg font-medium text-[#93d1d3] leading-tight">웹툰 제작<br />(각색)</p>
               </div>
-              <div className="text-[#93d1d3] text-3xl">→</div>
-              <div className="bg-white border-2 border-[#93d1d3] rounded-2xl px-8 py-6 min-w-[180px]">
-                <p className="text-lg font-medium text-[#93d1d3]">한국 드라마<br />리메이크</p>
+              <div className="text-[#93d1d3] text-2xl md:text-3xl rotate-90 md:rotate-0">→</div>
+              <div className="bg-white border-2 border-[#93d1d3] rounded-2xl px-6 py-8 w-full md:w-48 h-24 flex items-center justify-center">
+                <p className="text-base md:text-lg font-medium text-[#93d1d3] leading-tight">한국 드라마<br />리메이크</p>
               </div>
             </div>
           </div>
