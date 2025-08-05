@@ -73,7 +73,7 @@ export default function BookPublishingSection() {
           {/* 내지 */}
           <div>
             <div className="text-sm font-light text-gray-400 mb-6 tracking-wider text-center">
-              INTERIOR
+              CONTENT
             </div>
             <div className="w-full">
               <Image
