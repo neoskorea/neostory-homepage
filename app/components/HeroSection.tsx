@@ -1,10 +1,11 @@
 "use client"; // 이 컴포넌트가 클라이언트 측에서 실행됨을 명시합니다.
 
 import Image from "next/image";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 
 export default function HeroSection() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -123,11 +124,22 @@ export default function HeroSection() {
     };
   }, []);
 
+  // 페이드인 효과를 위한 useEffect
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoaded(true);
+    }, 100); // 100ms 후 페이드인 시작
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-white">
       <canvas ref={canvasRef} className="absolute top-0 left-0 w-full h-full z-0" />
-      <div className="relative z-10 text-center max-w-6xl mx-auto px-4">
-        <div className="mb-12">
+      <div className={`relative z-10 text-center max-w-6xl mx-auto px-4 transition-all duration-1000 ease-out ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}>
+        <div className={`mb-12 transition-all duration-1200 ease-out delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+          }`}>
           <Image
             src="/images/logo/neostory-logo-mint.png"
             alt="Neostory Logo"
@@ -137,7 +149,8 @@ export default function HeroSection() {
             className="mx-auto"
           />
         </div>
-        <h1 className="text-gray-900 mb-8">
+        <h1 className={`text-gray-900 mb-8 transition-all duration-1000 ease-out delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+          }`}>
           <div className="text-sm md:text-base font-light tracking-wider text-gray-500 mb-6">
             CREATIVE CONTENT BRIDGE
           </div>
@@ -151,11 +164,13 @@ export default function HeroSection() {
             연결합니다
           </div>
         </h1>
-        <p className="text-base md:text-lg font-light text-gray-600 max-w-2xl mx-auto leading-relaxed">
+        <p className={`text-base md:text-lg font-light text-gray-600 max-w-2xl mx-auto leading-relaxed transition-all duration-1000 ease-out delay-600 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+          }`}>
           한국과 일본을 잇는 글로벌 콘텐츠 브릿지
         </p>
       </div>
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
+      <div className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 transition-all duration-1000 ease-out delay-800 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+        }`}>
         <div className="flex flex-col items-center text-gray-500">
           <span className="text-xs font-light mb-2 tracking-wider">SCROLL</span>
           <div className="w-px h-12 bg-gray-400"></div>
