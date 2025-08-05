@@ -24,13 +24,13 @@ export default function HeroSection() {
           <div className="text-sm md:text-base font-light tracking-wider text-gray-500 mb-6">
             CREATIVE CONTENT BRIDGE
           </div>
-          <div className="text-3xl md:text-5xl lg:text-6xl font-light leading-tight">
+          <div className="text-2xl md:text-4xl lg:text-5xl font-light leading-tight">
             웹툰에서 영상까지,
           </div>
-          <div className="text-3xl md:text-5xl lg:text-6xl font-light leading-tight text-[#93d1d3] mt-2">
+          <div className="text-2xl md:text-4xl lg:text-5xl font-bold leading-tight text-[#93d1d3] mt-2">
             IP의 모든 가능성을
           </div>
-          <div className="text-3xl md:text-5xl lg:text-6xl font-light leading-tight mt-2">
+          <div className="text-2xl md:text-4xl lg:text-5xl font-light leading-tight mt-2">
             연결합니다
           </div>
         </h1>
