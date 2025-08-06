@@ -46,7 +46,7 @@ export async function POST(request: NextRequest) {
 ${message}
 
 ---
-이 메일은 neos 홈페이지 문의 폼을 통해 자동으로 발송되었습니다.
+이 메일은 네오스토리 홈페이지 문의 폼을 통해 자동으로 발송되었습니다.
     `.trim();
 
     // 이메일 발송
