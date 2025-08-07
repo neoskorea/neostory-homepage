@@ -166,7 +166,7 @@ export default function HeroSection() {
         </h1>
         <p className={`text-base md:text-lg font-light text-gray-600 max-w-2xl mx-auto leading-relaxed transition-all duration-1000 ease-out delay-600 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
           }`}>
-          한국과 일본을 잇는 글로벌 콘텐츠 브릿지
+          한국과 일본 그리고 미국을 잇는 글로벌 콘텐츠 브릿지
         </p>
       </div>
       <div className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 transition-all duration-1000 ease-out delay-800 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
