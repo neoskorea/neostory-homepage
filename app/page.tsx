@@ -5,6 +5,7 @@ import IPShowcaseSection from "./components/IPShowcaseSection";
 import EpubServiceSection from "./components/EpubServiceSection";
 import BookPublishingSection from "./components/BookPublishingSection";
 import PageConversionSection from "./components/PageConversionSection";
+import NewsSection from "./components/NewsSection";
 import CTASection from "./components/CTASection";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <EpubServiceSection />
       <BookPublishingSection />
       {/* <PageConversionSection /> */}
+      <NewsSection />
       <CTASection />
     </div>
   );
