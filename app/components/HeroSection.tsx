@@ -68,7 +68,7 @@ export default function HeroSection() {
         let y = (Math.random() * ((canvas.height - size * 2) - (size * 2)) + size * 2);
         let directionX = (Math.random() * 0.3) - 0.15;
         let directionY = (Math.random() * 0.3) - 0.15;
-        let color = 'rgba(77, 182, 172, 0.6)'; // 더 투명하게
+        let color = 'rgba(77, 182, 172, 0.4)'; // 배경 이미지와 조화를 위해 더 투명하게
         particlesArray.push(new Particle(x, y, directionX, directionY, size, color));
       }
     };
@@ -84,7 +84,7 @@ export default function HeroSection() {
           // 연결선 거리를 20% 줄임 (8 -> 10으로 증가하여 연결 조건을 더 엄격하게)
           if (distance < (canvas.width / 10) * (canvas.height / 10)) {
             opacityValue = 1 - (distance / 30000); // 거리 기준도 조정
-            ctx.strokeStyle = `rgba(77, 182, 172, ${opacityValue * 0.25})`; // 더 투명한 연결선
+            ctx.strokeStyle = `rgba(77, 182, 172, ${opacityValue * 0.15})`; // 배경 이미지와 조화를 위해 더 투명하게
             ctx.lineWidth = 0.7;
             ctx.beginPath();
             ctx.moveTo(particleA.x, particleA.y);
@@ -134,8 +134,26 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-white">
-      <canvas ref={canvasRef} className="absolute top-0 left-0 w-full h-full z-0" />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* 배경 이미지 */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/neostory-home-hero-compressed.png"
+          alt="Neostory Hero Background"
+          fill
+          priority
+          className="object-cover object-center"
+          sizes="100vw"
+        />
+      </div>
+
+      {/* 오버레이 - 텍스트 가독성을 위한 어두운 오버레이 */}
+      <div className="absolute inset-0 bg-black/40 z-1"></div>
+
+      {/* 캔버스 애니메이션 */}
+      <canvas ref={canvasRef} className="absolute top-0 left-0 w-full h-full z-2" />
+
+      {/* 콘텐츠 */}
       <div className={`relative z-10 text-center max-w-6xl mx-auto px-4 transition-all duration-1000 ease-out ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
         <div className={`mb-12 transition-all duration-1200 ease-out delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
@@ -149,9 +167,9 @@ export default function HeroSection() {
             className="mx-auto"
           />
         </div>
-        <h1 className={`text-gray-900 mb-8 transition-all duration-1000 ease-out delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+        <h1 className={`text-white mb-8 transition-all duration-1000 ease-out delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
           }`}>
-          <div className="text-sm md:text-base font-light tracking-wider text-gray-500 mb-6">
+          <div className="text-sm md:text-base font-light tracking-wider text-gray-200 mb-6">
             CREATIVE CONTENT BRIDGE
           </div>
           <div className="text-2xl md:text-4xl lg:text-5xl font-light leading-tight">
@@ -164,16 +182,16 @@ export default function HeroSection() {
             연결합니다
           </div>
         </h1>
-        <p className={`text-base md:text-lg font-light text-gray-600 max-w-2xl mx-auto leading-relaxed transition-all duration-1000 ease-out delay-600 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+        <p className={`text-base md:text-lg font-light text-gray-200 max-w-2xl mx-auto leading-relaxed transition-all duration-1000 ease-out delay-600 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
           }`}>
           한국과 일본 그리고 미국을 잇는 글로벌 콘텐츠 브릿지
         </p>
       </div>
       <div className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 transition-all duration-1000 ease-out delay-800 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
         }`}>
-        <div className="flex flex-col items-center text-gray-500">
+        <div className="flex flex-col items-center text-gray-300">
           <span className="text-xs font-light mb-2 tracking-wider">SCROLL</span>
-          <div className="w-px h-12 bg-gray-400"></div>
+          <div className="w-px h-12 bg-gray-300"></div>
         </div>
       </div>
     </section>

@@ -16,7 +16,7 @@ export default function Home() {
       <IPShowcaseSection />
       <EpubServiceSection />
       <BookPublishingSection />
-      <PageConversionSection />
+      {/* <PageConversionSection /> */}
       <CTASection />
     </div>
   );
