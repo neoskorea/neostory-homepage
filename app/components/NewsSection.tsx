@@ -189,7 +189,7 @@ export default function NewsSection() {
 
         {/* 캐러셀 */}
         <div className="relative">
-          <div ref={viewportRef} className="overflow-hidden">
+          <div ref={viewportRef} className="overflow-x-hidden overflow-y-visible pb-4 md:pb-6">
             <div
               ref={trackRef}
               className="flex items-stretch"
