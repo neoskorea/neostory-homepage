@@ -12,7 +12,7 @@ export default function WhyNeostorySection() {
     },
     {
       title: "콘텐츠의 극대화",
-      description: "한일미 중심으로 다양한 플랫폼에서의 콘텐츠 확장 전략",
+      description: "한•일•미 중심으로 다양한 플랫폼에서의 콘텐츠 확장 전략",
       number: "03"
     }
   ];
