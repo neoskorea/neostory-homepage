@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/neostory-home-hero-compressed.png",
+        url: "/images/neostory-og-image.png",
         width: 1200,
         height: 630,
         alt: "네오스토리 홈페이지 대표 이미지",
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     title: "네오스토리 - 글로벌 콘텐츠 브릿지",
     description:
       "웹툰에서 영상까지, IP의 모든 가능성을 연결합니다. 글로벌 EPUB·출판·판형화 서비스.",
-    images: ["/images/neostory-home-hero-compressed.png"],
+    images: ["/images/neostory-og-image.png"],
   },
   alternates: {
     canonical: "/",
