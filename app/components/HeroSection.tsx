@@ -61,14 +61,14 @@ export default function HeroSection() {
     const init = () => {
       if (!canvas) return;
       particlesArray = [];
-      let numberOfParticles = (canvas.height * canvas.width) / 12000;
+      const numberOfParticles = (canvas.height * canvas.width) / 12000;
       for (let i = 0; i < numberOfParticles; i++) {
-        let size = (Math.random() * 1.5) + 0.5;
-        let x = (Math.random() * ((canvas.width - size * 2) - (size * 2)) + size * 2);
-        let y = (Math.random() * ((canvas.height - size * 2) - (size * 2)) + size * 2);
-        let directionX = (Math.random() * 0.3) - 0.15;
-        let directionY = (Math.random() * 0.3) - 0.15;
-        let color = 'rgba(77, 182, 172, 0.4)'; // 배경 이미지와 조화를 위해 더 투명하게
+        const size = (Math.random() * 1.5) + 0.5;
+        const x = (Math.random() * ((canvas.width - size * 2) - (size * 2)) + size * 2);
+        const y = (Math.random() * ((canvas.height - size * 2) - (size * 2)) + size * 2);
+        const directionX = (Math.random() * 0.3) - 0.15;
+        const directionY = (Math.random() * 0.3) - 0.15;
+        const color = 'rgba(77, 182, 172, 0.4)'; // 배경 이미지와 조화를 위해 더 투명하게
         particlesArray.push(new Particle(x, y, directionX, directionY, size, color));
       }
     };
@@ -80,7 +80,7 @@ export default function HeroSection() {
         for (let b = a; b < particlesArray.length; b++) {
           const particleA = particlesArray[a];
           const particleB = particlesArray[b];
-          let distance = ((particleA.x - particleB.x) ** 2) + ((particleA.y - particleB.y) ** 2);
+          const distance = ((particleA.x - particleB.x) ** 2) + ((particleA.y - particleB.y) ** 2);
           // 연결선 거리를 20% 줄임 (8 -> 10으로 증가하여 연결 조건을 더 엄격하게)
           if (distance < (canvas.width / 10) * (canvas.height / 10)) {
             opacityValue = 1 - (distance / 30000); // 거리 기준도 조정
