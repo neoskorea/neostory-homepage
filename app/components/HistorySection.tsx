@@ -45,11 +45,11 @@ export default function HistorySection() {
     <section className="py-24 px-4 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         {/* 섹션 헤더 */}
-        <div className="text-center mb-20">
-          <div className="text-sm font-light tracking-[0.3em] text-gray-400 mb-4">
+        <div className="text-center mb-16 md:mb-20">
+          <div className="text-xs sm:text-sm font-light tracking-[0.25em] sm:tracking-[0.3em] text-gray-400 mb-3 sm:mb-4">
             OUR JOURNEY
           </div>
-          <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-light text-gray-900 mb-4 md:mb-6 leading-snug break-keep">
             네오스토리의 성장과 혁신의 발자취
           </h2>
         </div>
@@ -64,7 +64,7 @@ export default function HistorySection() {
               <div key={index} className="flex flex-col lg:flex-row items-center">
                 {/* 연도 (항상 왼쪽) */}
                 <div className="flex-1 text-center lg:text-right lg:pr-16 mb-8 lg:mb-0">
-                  <div className="text-6xl md:text-7xl font-light text-[#93d1d3]">
+                  <div className="text-4xl sm:text-5xl md:text-7xl font-light text-[#93d1d3]">
                     {item.year}
                   </div>
                 </div>

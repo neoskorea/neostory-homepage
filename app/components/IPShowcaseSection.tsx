@@ -101,8 +101,8 @@ export default function IPShowcaseSection() {
               {/* 콘텐츠 - 텍스트 크기 증가 */}
               <div className="flex-1">
                 <div className="flex items-center gap-3 mb-4">
-                  <h3 className="text-4xl font-light text-gray-900">{ip.title}</h3>
-                  <span className={`px-3 py-1 rounded text-sm font-light tracking-wider ${ip.status === 'ongoing' ? 'bg-green-100 text-green-700' :
+                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-light text-gray-900 leading-snug break-keep">{ip.title}</h3>
+                  <span className={`px-3 py-1 rounded text-xs sm:text-sm font-light tracking-wider ${ip.status === 'ongoing' ? 'bg-green-100 text-green-700' :
                     ip.status === 'completed' ? 'bg-blue-100 text-blue-700' :
                       'bg-orange-100 text-orange-700'
                     }`}>
@@ -110,19 +110,19 @@ export default function IPShowcaseSection() {
                   </span>
                 </div>
 
-                <div className="text-base font-light text-gray-500 mb-6">
+                <div className="text-sm sm:text-base font-light text-gray-500 mb-4 sm:mb-6 break-keep">
                   {ip.author}
                 </div>
 
-                <p className="text-gray-600 font-light leading-relaxed mb-8 text-lg whitespace-pre-line">
+                <p className="text-gray-600 font-light leading-relaxed mb-6 sm:mb-8 text-base sm:text-lg whitespace-pre-line break-keep">
                   {ip.description}
                 </p>
 
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap gap-2 sm:gap-3">
                   {ip.tags.map((tag, tagIndex) => (
                     <span
                       key={tagIndex}
-                      className="px-4 py-2 bg-[#93d1d3] text-white text-sm font-medium rounded shadow-sm"
+                      className="px-3 py-1 sm:px-4 sm:py-2 bg-[#93d1d3] text-white text-xs sm:text-sm font-medium rounded shadow-sm"
                     >
                       {tag}
                     </span>
@@ -139,16 +139,16 @@ export default function IPShowcaseSection() {
             {/* 제목과 상태 */}
             <div className="text-center mb-8">
               <div className="flex items-center justify-center gap-4 mb-4">
-                <h3 className="text-4xl font-light text-gray-900">{ip.title}</h3>
-                <span className="px-4 py-2 bg-orange-100 text-orange-700 text-sm font-light tracking-wider rounded">
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-light text-gray-900 leading-snug break-keep">{ip.title}</h3>
+                <span className="px-3 py-1 sm:px-4 sm:py-2 bg-orange-100 text-orange-700 text-xs sm:text-sm font-light tracking-wider rounded">
                   예정작
                 </span>
               </div>
-              <p className="text-xl font-light text-gray-600">일본 드라마 웹툰 제작</p>
+              <p className="text-base sm:text-xl font-light text-gray-600 break-keep">일본 드라마 웹툰 제작</p>
             </div>
 
             {/* 메인 이미지 - 좌우 꽉 채움 */}
-            <div className="mb-12">
+            <div className="mb-8 sm:mb-12">
               <div className="aspect-[16/9] overflow-hidden rounded">
                 <Image
                   src={ip.image}
@@ -161,44 +161,44 @@ export default function IPShowcaseSection() {
             </div>
 
             {/* 작가 강조 */}
-            <div className="text-center mb-8">
-              <p className="text-xl font-medium text-gray-900 leading-relaxed">
-                국내에도 많이 알려진 &lt;조제, 호랑이, 그리고 물고기들&gt;, &lt;메종 드 히미코&gt;의<br />
+            <div className="text-center mb-6 sm:mb-8">
+              <p className="text-base sm:text-xl font-medium text-gray-900 leading-relaxed break-keep">
+                국내에도 많이 알려진 &lt;조제, 호랑이, 그리고 물고기들&gt;, &lt;메종 드 히미코&gt;의<br className="hidden sm:block" />
                 <span className="text-[#93d1d3] font-semibold">와타나베 아야 작가 원작 집필</span>
               </p>
             </div>
 
             {/* 설명 */}
-            <div className="text-center mb-12 max-w-4xl mx-auto">
-              <p className="text-lg font-light text-gray-600 leading-relaxed">
-                사회고발 미스터리 추적극으로, 좌천된 앵커와 예능국 PD가<br />
-                무고죄로 복역 중인 사내의 사건을 추적하며 벌어지는 이야기를<br />
+            <div className="text-center mb-8 sm:mb-12 max-w-4xl mx-auto">
+              <p className="text-base sm:text-lg font-light text-gray-600 leading-relaxed break-keep">
+                사회고발 미스터리 추적극으로, 좌천된 앵커와 예능국 PD가<br className="hidden sm:block" />
+                무고죄로 복역 중인 사내의 사건을 추적하며 벌어지는 이야기를<br className="hidden sm:block" />
                 한국 실정에 맞게 각색하여 리메이크 제작 예정
               </p>
             </div>
 
             {/* 태그들 */}
-            <div className="flex flex-col justify-center items-center gap-4 mb-16">
-              <span className="px-6 py-4 bg-[#93d1d3] text-white text-base font-semibold rounded text-center leading-tight">
+            <div className="flex flex-col justify-center items-center gap-3 sm:gap-4 mb-12 sm:mb-16">
+              <span className="px-4 py-3 sm:px-6 sm:py-4 bg-[#93d1d3] text-white text-sm sm:text-base font-semibold rounded text-center leading-tight break-keep">
                 2025년 하반기 네이버/라인망가 한·일 동시 연재
               </span>
-              <span className="px-6 py-4 bg-[#93d1d3] text-white text-base font-semibold rounded text-center leading-tight">
+              <span className="px-4 py-3 sm:px-6 sm:py-4 bg-[#93d1d3] text-white text-sm sm:text-base font-semibold rounded text-center leading-tight break-keep">
                 일본 간사이 TV 웹툰 제작 투자
               </span>
             </div>
 
             {/* 도식화 */}
-            <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 text-center">
-              <div className="bg-white border-2 border-[#93d1d3] rounded-2xl px-6 py-8 w-full md:w-48 h-24 flex items-center justify-center">
-                <p className="text-base md:text-lg font-medium text-[#93d1d3] leading-tight">일본 히트 드라마</p>
+            <div className="flex flex-col md:flex-row justify-center items-center gap-3 md:gap-8 text-center">
+              <div className="bg-white border-2 border-[#93d1d3] rounded-2xl px-4 sm:px-6 py-6 sm:py-8 w-full md:w-48 h-20 sm:h-24 flex items-center justify-center">
+                <p className="text-sm sm:text-base md:text-lg font-medium text-[#93d1d3] leading-tight break-keep">일본 히트 드라마</p>
               </div>
-              <div className="text-[#93d1d3] text-2xl md:text-3xl rotate-90 md:rotate-0">→</div>
-              <div className="bg-white border-2 border-[#93d1d3] rounded-2xl px-6 py-8 w-full md:w-48 h-24 flex items-center justify-center">
-                <p className="text-base md:text-lg font-medium text-[#93d1d3] leading-tight">웹툰 제작<br />(각색)</p>
+              <div className="text-[#93d1d3] text-xl sm:text-2xl md:text-3xl rotate-90 md:rotate-0">→</div>
+              <div className="bg-white border-2 border-[#93d1d3] rounded-2xl px-4 sm:px-6 py-6 sm:py-8 w-full md:w-48 h-20 sm:h-24 flex items-center justify-center">
+                <p className="text-sm sm:text-base md:text-lg font-medium text-[#93d1d3] leading-tight break-keep">웹툰 제작<br className="hidden sm:block" />(각색)</p>
               </div>
-              <div className="text-[#93d1d3] text-2xl md:text-3xl rotate-90 md:rotate-0">→</div>
-              <div className="bg-white border-2 border-[#93d1d3] rounded-2xl px-6 py-8 w-full md:w-48 h-24 flex items-center justify-center">
-                <p className="text-base md:text-lg font-medium text-[#93d1d3] leading-tight">한국 드라마<br />리메이크</p>
+              <div className="text-[#93d1d3] text-xl sm:text-2xl md:text-3xl rotate-90 md:rotate-0">→</div>
+              <div className="bg-white border-2 border-[#93d1d3] rounded-2xl px-4 sm:px-6 py-6 sm:py-8 w-full md:w-48 h-20 sm:h-24 flex items-center justify-center">
+                <p className="text-sm sm:text-base md:text-lg font-medium text-[#93d1d3] leading-tight break-keep">한국 드라마<br className="hidden sm:block" />리메이크</p>
               </div>
             </div>
           </div>

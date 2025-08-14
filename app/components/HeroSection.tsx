@@ -164,7 +164,7 @@ export default function HeroSection() {
             width={400}
             height={160}
             priority
-            className="mx-auto"
+            className="mx-auto w-40 sm:w-56 md:w-72 lg:w-[400px] h-auto"
           />
         </div>
         <h1 className={`text-white mb-8 transition-all duration-1000 ease-out delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
@@ -172,13 +172,13 @@ export default function HeroSection() {
           <div className="text-sm md:text-base font-light tracking-wider text-gray-200 mb-6">
             CREATIVE CONTENT BRIDGE
           </div>
-          <div className="text-2xl md:text-4xl lg:text-5xl font-light leading-tight">
+          <div className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-light leading-tight break-keep">
             웹툰에서 영상까지,
           </div>
-          <div className="text-2xl md:text-4xl lg:text-5xl font-bold leading-tight text-[#4DB6AC] mt-2">
+          <div className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold leading-tight text-[#4DB6AC] mt-2 break-keep">
             IP의 모든 가능성을
           </div>
-          <div className="text-2xl md:text-4xl lg:text-5xl font-light leading-tight mt-2">
+          <div className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-light leading-tight mt-2 break-keep">
             연결합니다
           </div>
         </h1>

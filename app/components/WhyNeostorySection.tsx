@@ -21,11 +21,11 @@ export default function WhyNeostorySection() {
     <section className="py-24 px-4 bg-white">
       <div className="max-w-7xl mx-auto">
         {/* 섹션 헤더 */}
-        <div className="text-center mb-20">
-          <div className="text-sm font-light tracking-[0.3em] text-gray-400 mb-4">
+        <div className="text-center mb-16 md:mb-20">
+          <div className="text-xs sm:text-sm font-light tracking-[0.25em] sm:tracking-[0.3em] text-gray-400 mb-3 sm:mb-4">
             WHY NEOSTORY
           </div>
-          <h2 className="text-4xl md:text-5xl font-light text-gray-900">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-light text-gray-900 leading-snug break-keep">
             네오스토리만의 차별화된 경쟁력
           </h2>
         </div>
@@ -38,10 +38,10 @@ export default function WhyNeostorySection() {
                 <div className="text-6xl font-light text-gray-100 group-hover:text-[#93d1d3]/20 transition-colors duration-300 mb-6">
                   {feature.number}
                 </div>
-                <h3 className="text-xl font-medium text-gray-900 mb-4 leading-tight">
+                <h3 className="text-lg sm:text-xl font-medium text-gray-900 mb-3 leading-snug break-keep">
                   {feature.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed font-light">
+                <p className="text-sm sm:text-base text-gray-600 leading-relaxed font-light break-keep">
                   {feature.description}
                 </p>
               </div>

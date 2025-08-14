@@ -104,9 +104,9 @@ export default function CTASection() {
             <br />
             기다립니다
           </h2>
-          <p className="text-xl text-white/90 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-white/90 leading-relaxed max-w-2xl mx-auto">
             네오스토리와 함께 IP의 무한한 가능성을 탐험하고
-            <br />
+            <br className="hidden md:block" />
             글로벌 콘텐츠 시장에서 새로운 성공을 만들어가세요
           </p>
         </div>
@@ -222,7 +222,11 @@ export default function CTASection() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-white/80">
             <div>
               <h3 className="font-semibold mb-2">이메일</h3>
-              <p>contact@neostory.kr</p>
+              <p>
+                <a href="mailto:contact@neostory.kr" className="underline decoration-white/40 hover:decoration-white transition-colors">
+                  contact@neostory.kr
+                </a>
+              </p>
             </div>
             <div>
               <h3 className="font-semibold mb-2">주소</h3>
