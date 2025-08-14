@@ -3,9 +3,9 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --neostory-primary: #93d1d3;
-  --neostory-secondary: #6bbfc2;
-  --neostory-dark: #4a9da1;
+  --neostory-primary: #111111;
+  --neostory-secondary: #1f2937;
+  --neostory-dark: #0a0a0a;
 }
 
 @theme inline {
