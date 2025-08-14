@@ -188,17 +188,17 @@ export default function IPShowcaseSection() {
             </div>
 
             {/* 도식화 */}
-            <div className="flex flex-col md:flex-row justify-center items-center gap-3 md:gap-8 text-center">
+            <div className="flex flex-row justify-center items-center gap-3 md:gap-8 text-center">
               <div className="bg-white border-2 border-[#93d1d3] rounded-2xl px-4 sm:px-6 py-6 sm:py-8 w-full md:w-48 h-20 sm:h-24 flex items-center justify-center">
                 <p className="text-sm sm:text-base md:text-lg font-medium text-[#93d1d3] leading-tight break-keep">일본 히트 드라마</p>
               </div>
-              <div className="text-[#93d1d3] text-xl sm:text-2xl md:text-3xl rotate-90 md:rotate-0">→</div>
+              <div className="text-[#93d1d3] text-xl sm:text-2xl md:text-3xl rotate-0">→</div>
               <div className="bg-white border-2 border-[#93d1d3] rounded-2xl px-4 sm:px-6 py-6 sm:py-8 w-full md:w-48 h-20 sm:h-24 flex items-center justify-center">
-                <p className="text-sm sm:text-base md:text-lg font-medium text-[#93d1d3] leading-tight break-keep">웹툰 제작<br className="hidden sm:block" />(각색)</p>
+                <p className="text-sm sm:text-base md:text-lg font-medium text-[#93d1d3] leading-tight break-keep">웹툰 제작<br />(각색)</p>
               </div>
-              <div className="text-[#93d1d3] text-xl sm:text-2xl md:text-3xl rotate-90 md:rotate-0">→</div>
+              <div className="text-[#93d1d3] text-xl sm:text-2xl md:text-3xl rotate-0">→</div>
               <div className="bg-white border-2 border-[#93d1d3] rounded-2xl px-4 sm:px-6 py-6 sm:py-8 w-full md:w-48 h-20 sm:h-24 flex items-center justify-center">
-                <p className="text-sm sm:text-base md:text-lg font-medium text-[#93d1d3] leading-tight break-keep">한국 드라마<br className="hidden sm:block" />리메이크</p>
+                <p className="text-sm sm:text-base md:text-lg font-medium text-[#93d1d3] leading-tight break-keep">한국 드라마<br />리메이크</p>
               </div>
             </div>
           </div>
