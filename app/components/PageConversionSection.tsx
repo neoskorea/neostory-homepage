@@ -100,7 +100,7 @@ export default function PageConversionSection() {
         </div>
 
         {/* 실제 변환 예시 캐로우셀 */}
-        <PageConversionCarousel />
+        {/* <PageConversionCarousel /> */}
 
         {/* 핵심 장점 */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-20">
